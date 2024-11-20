@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/models/user_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/widgets/drawer_item.dart';
+import 'package:responsive_dash_board/widgets/drawer_item_list_view.dart';
 import 'package:responsive_dash_board/widgets/user_info_list_tile.dart';
 
 class CustomDrawer extends StatelessWidget {
@@ -15,12 +18,21 @@ class CustomDrawer extends StatelessWidget {
       name: 'Lekan Okeowo',
       email: 'demo@gmail.com',
     );
+
     return const SizedBox(
-      child: Column(
-        children: [
-          UserInfoListTile(
-            userModel: userModel,
+      child: CustomScrollView(
+        slivers: [
+          SliverToBoxAdapter(
+            child: UserInfoListTile(
+              userModel: userModel,
+            ),
           ),
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 8,
+            ),
+          ),
+          DrawerItemsListView(),
         ],
       ),
     );
