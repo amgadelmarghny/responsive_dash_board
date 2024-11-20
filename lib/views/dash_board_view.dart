@@ -9,9 +9,10 @@ class DashBoardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: CustomLayoutBuilder(
-          mobileLayout: (context) => const SizedBox(),
-          tabletLayout: (context) => const SizedBox(),
-          desktopLayout: (context) => const DesktopLayout()),
+        mobileLayout: (context) => const SizedBox(),
+        tabletLayout: (context) => const SizedBox(),
+        desktopLayout: (context) => const DesktopLayout(),
+      ),
     );
   }
 }
