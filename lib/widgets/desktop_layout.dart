@@ -10,7 +10,7 @@ class DesktopLayout extends StatelessWidget {
       children: [
         Expanded(
           child: CustomDrawer(),
-        )
+        ),
       ],
     );
   }

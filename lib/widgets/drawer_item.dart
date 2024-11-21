@@ -7,10 +7,11 @@ class DrawerItem extends StatelessWidget {
   const DrawerItem({
     super.key,
     required this.drawerItemModel,
-    required this.isActive,
+    this.isActive = false,
   });
+
   final DrawerItemModel drawerItemModel;
-  final bool isActive;
+  final bool isActive ;
   @override
   Widget build(BuildContext context) {
     return ListTile(
