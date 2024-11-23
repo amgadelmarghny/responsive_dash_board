@@ -19,9 +19,15 @@ class CustomDrawer extends StatelessWidget {
       email: 'demo@gmail.com',
     );
 
-    return const SizedBox(
-      child: CustomScrollView(
+    return Container(
+      color: Colors.white,
+      child: const CustomScrollView(
         slivers: [
+          SliverToBoxAdapter(
+            child: SizedBox(
+              height: 20,
+            ),
+          ),
           SliverToBoxAdapter(
             child: UserInfoListTile(
               userModel: userModel,
@@ -35,21 +41,24 @@ class CustomDrawer extends StatelessWidget {
           DrawerItemsListView(),
           SliverFillRemaining(
             hasScrollBody: false,
-            child: Column(children: [
-            Expanded(
-              child: SizedBox(),
-            ),
-            DrawerItem(drawerItemModel:
-             DrawerItemModel(
-              image: Assets.imagesSettings,
-               title: 'Setting System',),
-               ),
-            DrawerItem(drawerItemModel:
-             DrawerItemModel(
-              image: Assets.imagesLogout,
-               title: 'Logout account',),
-              ),
-             ],
+            child: Column(
+              children: [
+                Expanded(
+                  child: SizedBox(),
+                ),
+                DrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: Assets.imagesSettings,
+                    title: 'Setting System',
+                  ),
+                ),
+                DrawerItem(
+                  drawerItemModel: DrawerItemModel(
+                    image: Assets.imagesLogout,
+                    title: 'Logout account',
+                  ),
+                ),
+              ],
             ),
           )
         ],
