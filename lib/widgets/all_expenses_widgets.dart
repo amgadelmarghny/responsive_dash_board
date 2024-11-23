@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
-import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_item_list_builder.dart';
 
 class AllExpensesWidget extends StatelessWidget {
   const AllExpensesWidget({
@@ -21,6 +21,7 @@ class AllExpensesWidget extends StatelessWidget {
           SizedBox(
             height: 16,
           ),
+          AllExpensesItemListBuilder(),
         ],
       ),
     );
