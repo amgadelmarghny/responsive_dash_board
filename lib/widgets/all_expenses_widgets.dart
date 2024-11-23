@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:responsive_dash_board/utils/app_style.dart';
-import 'package:responsive_dash_board/widgets/range_options_button.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
+import 'package:responsive_dash_board/widgets/all_expenses_item.dart';
 
 class AllExpensesWidget extends StatelessWidget {
   const AllExpensesWidget({
@@ -15,18 +15,11 @@ class AllExpensesWidget extends StatelessWidget {
         color: Colors.white,
         borderRadius: BorderRadius.circular(12),
       ),
-      child: Column(
+      child: const Column(
         children: [
-          // All Expenses header
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                'All Expenses',
-                style: AppStyles.styleSemiBold20(context),
-              ),
-              const RangeOptionsButton(),
-            ],
+          AllExpensesHeader(),
+          SizedBox(
+            height: 16,
           ),
         ],
       ),
