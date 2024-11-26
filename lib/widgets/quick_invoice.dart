@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/widgets/custom_container.dart';
 
 class QuickInvoiceWidget extends StatelessWidget {
   const QuickInvoiceWidget({
@@ -7,11 +8,8 @@ class QuickInvoiceWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(15),
-      ),
+    return const CustomContainer(
+      padding: 24,
     );
   }
 }

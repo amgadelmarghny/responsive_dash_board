@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_header.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_item_list_builder.dart';
+import 'package:responsive_dash_board/widgets/custom_container.dart';
 
 class AllExpensesWidget extends StatelessWidget {
   const AllExpensesWidget({
@@ -9,13 +10,8 @@ class AllExpensesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(12),
-      ),
-      child: const Column(
+    return const CustomContainer(
+      child: Column(
         children: [
           AllExpensesHeader(),
           SizedBox(
