@@ -1,41 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class AllExpensesItemheader extends StatelessWidget {
-  const AllExpensesItemheader({
-    super.key,
-    required this.image,
-    required this.isActive,
-  });
+class AllExpensesItemHeader extends StatelessWidget {
+  const AllExpensesItemHeader(
+      {super.key, required this.image, this.imageBackground, this.imageColor});
 
   final String image;
-  final bool isActive;
+  final Color? imageBackground, imageColor;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        Container(
-          width: 60,
-          height: 60,
-          padding: const EdgeInsets.all(14),
-          decoration: ShapeDecoration(
-            shape: const OvalBorder(),
-            color: isActive
-                ? Colors.white.withOpacity(0.10000000149011612)
-                : const Color(0xffFAFAFA),
-          ),
-          child: SvgPicture.asset(
-            image,
-            colorFilter: ColorFilter.mode(
-                isActive ? Colors.white : const Color(0xff4EB7F2),
-                BlendMode.srcIn),
+        Flexible(
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(maxWidth: 60),
+            child: AspectRatio(
+              aspectRatio: 1,
+              child: Container(
+                decoration: ShapeDecoration(
+                  color: imageBackground ?? const Color(0xFFFAFAFA),
+                  shape: const OvalBorder(),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    image,
+                    colorFilter: ColorFilter.mode(
+                        imageColor ?? const Color(0xff4EB7F2), BlendMode.srcIn),
+                  ),
+                ),
+              ),
+            ),
           ),
         ),
         Icon(
           Icons.arrow_forward_ios_outlined,
-          color: isActive ? Colors.white : const Color(0xff064061),
+          color: imageColor == null ? const Color(0xFF064061) : Colors.white,
         )
       ],
     );

@@ -6,8 +6,8 @@ class CustomContainer extends StatelessWidget {
     this.padding,
     this.child,
   });
+  
   final double? padding;
-
   final Widget? child;
   @override
   Widget build(BuildContext context) {

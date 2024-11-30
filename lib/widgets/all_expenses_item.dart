@@ -18,7 +18,7 @@ class AllExpensesItem extends StatelessWidget {
       secondChild: InActiveAllExpensesItem(itemModel: itemModel),
       crossFadeState:
           isSelected ? CrossFadeState.showFirst : CrossFadeState.showSecond,
-      duration: const Duration(milliseconds: 500),
+      duration: const Duration(milliseconds: 450),
     );
   }
 }

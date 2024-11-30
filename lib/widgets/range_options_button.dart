@@ -10,49 +10,37 @@ class RangeOptionsButton extends StatefulWidget {
   State<RangeOptionsButton> createState() => _RangeOptionsButtonState();
 }
 
-List<String> _list = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
-
 class _RangeOptionsButtonState extends State<RangeOptionsButton> {
-  bool isStretchedDropDown = false;
-  String title = 'Monthly';
+  final List<String> _list = ['Daily', 'Weekly', 'Monthly', 'Yearly'];
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(8),
+      padding: const EdgeInsets.all(12),
       decoration: ShapeDecoration(
+        color: Colors.white,
         shape: RoundedRectangleBorder(
+          side: const BorderSide(width: 1, color: Color(0xFFF1F1F1)),
           borderRadius: BorderRadius.circular(12),
-          side: const BorderSide(
-            width: 1.5,
-            color: Color(0xffF1F1F1),
-          ),
         ),
       ),
-      child: InkWell(
-        onTap: () {
-          setState(() {
-            isStretchedDropDown != isStretchedDropDown;
-          });
-        },
-        child: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              title,
-              style: AppStyles.styleMedium16(context),
+      child: Row(
+        children: [
+          Text(
+            _list[3],
+            style: AppStyles.styleMedium16(context),
+          ),
+          const SizedBox(
+            width: 18,
+          ),
+          Transform.rotate(
+            angle: -1.57079633,
+            child: const Icon(
+              Icons.arrow_back_ios_new_outlined,
+              color: Color(0xFF064061),
             ),
-            const SizedBox(
-              width: 13,
-            ),
-            Transform.rotate(
-              angle: -1.5708,
-              child: const Icon(
-                Icons.arrow_back_ios,
-                color: Color(0xFF064061),
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
