@@ -18,9 +18,13 @@ class LatestTransctionListView extends StatelessWidget {
         name: 'Josh Nunito',
         email: 'joshnunito@gmail.com'),
     UserModel(
-        image: Assets.imagesAvatar1,
+        image: Assets.imagesAvatar3,
         name: 'Madrani Andi',
         email: 'madraniadi10@gmail'),
+    UserModel(
+        image: Assets.imagesAvatar1,
+        name: 'Josh Nunito',
+        email: 'joshnunito@gmail.com'),
   ];
 
   @override
