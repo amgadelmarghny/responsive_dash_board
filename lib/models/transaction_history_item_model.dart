@@ -2,7 +2,7 @@ class TransactionHistoryItemModel {
   final String title, date, income;
   final TransactionType transactionType;
 
-  TransactionHistoryItemModel(
+  const TransactionHistoryItemModel(
       {required this.title,
       required this.date,
       required this.income,

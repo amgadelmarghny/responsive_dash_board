@@ -21,7 +21,7 @@ class TransactionHistoryItem extends StatelessWidget {
           transactionHistoryItemModel.income,
           style: AppStyles.styleSemiBold20(context).copyWith(
             color: isIncome(transactionHistoryItemModel.transactionType)
-                ? Colors.green
+                ? const Color(0xff7DD97B)
                 : Colors.red,
           ),
         ),
