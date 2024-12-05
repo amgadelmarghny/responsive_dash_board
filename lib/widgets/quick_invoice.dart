@@ -18,7 +18,7 @@ class QuickInvoiceWidget extends StatelessWidget {
           QuickInvoiceHeader(),
           LatestTransactionSection(),
           Divider(
-            height: 48,
+            height: 40,
             color: Color(0xffF1F1F1),
           ),
           QuickInvoiceForm(),

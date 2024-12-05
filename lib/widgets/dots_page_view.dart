@@ -17,10 +17,8 @@ class CardDots extends StatelessWidget {
       effect: const ExpandingDotsEffect(
         expansionFactor: 2,
         spacing: 6.0,
-        dotWidth: 8.0,
-        dotHeight: 8.0,
-        radius: 4,
-        strokeWidth: 16,
+        dotWidth: 15.0,
+        dotHeight: 10.0,
         dotColor: Color(0xffE8E8E8),
         activeDotColor: Color(0xFF4EB7F2),
       ),

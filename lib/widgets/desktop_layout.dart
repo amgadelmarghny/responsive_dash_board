@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expensess_and_quick_invoice_section.dart';
-import 'package:responsive_dash_board/widgets/custom_container.dart';
 import 'package:responsive_dash_board/widgets/custom_drawer.dart';
-import 'package:responsive_dash_board/widgets/my_card_section.dart';
+import 'package:responsive_dash_board/widgets/my_card_anf_transaction_history_section.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({super.key});
@@ -16,7 +15,7 @@ class DesktopLayout extends StatelessWidget {
           child: CustomDrawer(),
         ),
         SizedBox(
-          width: 32,
+          width: 20,
         ),
         // second and third Sections
         Expanded(
@@ -25,7 +24,7 @@ class DesktopLayout extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(
                 child: SizedBox(
-                  height: 40,
+                  height: 20,
                 ),
               ),
               SliverFillRemaining(
@@ -38,19 +37,11 @@ class DesktopLayout extends StatelessWidget {
                       child: AllExpensessAndQuickInvoiceSection(),
                     ),
                     SizedBox(
-                      width: 24,
+                      width: 20,
                     ),
                     // third Sections
                     Expanded(
-                      child: CustomContainer(
-                        child: Column(
-                          children: [
-                            Expanded(
-                              child: MyCardSection(),
-                            ),
-                          ],
-                        ),
-                      ),
+                      child: MyCardAndTransactionHistorySection(),
                     ),
                   ],
                 ),
