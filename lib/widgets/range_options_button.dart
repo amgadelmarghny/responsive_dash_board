@@ -27,7 +27,7 @@ class _RangeOptionsButtonState extends State<RangeOptionsButton> {
       child: Row(
         children: [
           Text(
-            _list[3],
+            _list[2],
             style: AppStyles.styleMedium16(context),
           ),
           const SizedBox(
