@@ -3,10 +3,7 @@ import 'package:responsive_dash_board/utils/app_style.dart';
 import 'package:responsive_dash_board/widgets/range_options_button.dart';
 
 class IncomeHeader extends StatelessWidget {
-  const IncomeHeader(
-      {super.key});
-
-
+  const IncomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +11,7 @@ class IncomeHeader extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          'All Expenses',
+          'Income',
           style: AppStyles.styleSemiBold20(context),
         ),
         const RangeOptionsButton(),
