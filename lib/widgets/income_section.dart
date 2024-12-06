@@ -20,7 +20,7 @@ class IncomeSection extends StatelessWidget {
               Expanded(
                 child: IncomeChart(),
               ),
-              Expanded(child: IncomeItemsListView())
+              Expanded(flex: 2, child: IncomeItemsListView())
             ],
           )
         ],

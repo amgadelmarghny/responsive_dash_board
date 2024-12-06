@@ -15,7 +15,7 @@ class DesktopLayout extends StatelessWidget {
           child: CustomDrawer(),
         ),
         SizedBox(
-          width: 20,
+          width: 15,
         ),
         // second and third Sections
         Expanded(
@@ -24,7 +24,7 @@ class DesktopLayout extends StatelessWidget {
             slivers: [
               SliverToBoxAdapter(
                 child: SizedBox(
-                  height: 20,
+                  height: 15,
                 ),
               ),
               SliverFillRemaining(
@@ -37,7 +37,7 @@ class DesktopLayout extends StatelessWidget {
                       child: AllExpensessAndQuickInvoiceSection(),
                     ),
                     SizedBox(
-                      width: 20,
+                      width: 15,
                     ),
                     // third Sections
                     Expanded(
