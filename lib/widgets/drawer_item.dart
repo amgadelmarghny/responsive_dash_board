@@ -11,16 +11,20 @@ class DrawerItem extends StatelessWidget {
   });
 
   final DrawerItemModel drawerItemModel;
-  final bool isActive ;
+  final bool isActive;
   @override
   Widget build(BuildContext context) {
     return ListTile(
       leading: SvgPicture.asset(drawerItemModel.image),
-      title: Text(
-        drawerItemModel.title,
-        style: isActive
-            ? AppStyles.styleBold16(context)
-            : AppStyles.styleRegular16(context),
+      title: FittedBox(
+        fit: BoxFit.scaleDown,
+        alignment: Alignment.centerLeft,
+        child: Text(
+          drawerItemModel.title,
+          style: isActive
+              ? AppStyles.styleBold16(context)
+              : AppStyles.styleRegular16(context),
+        ),
       ),
       trailing: isActive
           ? Container(
