@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/all_expenses_item_model.dart';
 import 'package:responsive_dash_board/utils/app_style.dart';
+import 'package:responsive_dash_board/utils/size_config.dart';
 import 'package:responsive_dash_board/widgets/all_expenses_item_header.dart';
 
 class InActiveAllExpensesItem extends StatelessWidget {
@@ -13,8 +14,12 @@ class InActiveAllExpensesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    bool isMobileLayout = width < SizeConfigs.tabletSizeWidth;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(
+          horizontal: isMobileLayout ? 10 : 20, vertical: 16),
       decoration: ShapeDecoration(
         color: Colors.white,
         shape: RoundedRectangleBorder(
@@ -28,8 +33,8 @@ class InActiveAllExpensesItem extends StatelessWidget {
           AllExpensesItemHeader(
             image: itemModel.image,
           ),
-          const SizedBox(
-            height: 34,
+          SizedBox(
+            height: isMobileLayout ? 24 : 34,
           ),
           FittedBox(
             fit: BoxFit.scaleDown,
@@ -74,8 +79,12 @@ class ActiveAllExpensesItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    double width = MediaQuery.sizeOf(context).width;
+    bool isMobileLayout = width < SizeConfigs.tabletSizeWidth;
+
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 16),
+      padding: EdgeInsets.symmetric(
+          horizontal: isMobileLayout ? 10 : 20, vertical: 16),
       decoration: ShapeDecoration(
         color: const Color(0xFF4DB7F2),
         shape: RoundedRectangleBorder(
@@ -91,8 +100,8 @@ class ActiveAllExpensesItem extends StatelessWidget {
             imageColor: Colors.white,
             image: itemModel.image,
           ),
-          const SizedBox(
-            height: 34,
+          SizedBox(
+            height: isMobileLayout ? 24 : 34,
           ),
           FittedBox(
             fit: BoxFit.scaleDown,

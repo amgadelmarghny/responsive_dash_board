@@ -38,27 +38,47 @@ class _AllExpensesItemListBuilderState
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: List.generate(
-        _allExpensesItems.length,
-        (index) {
-          return Expanded(
-            child: InkWell(
-              onTap: () {
-                onTap(index);
-              },
-              child: Padding(
-                padding: index == 1
-                    ? const EdgeInsetsDirectional.symmetric(horizontal: 14)
-                    : EdgeInsets.zero,
-                child: AllExpensesItem(
-                  itemModel: _allExpensesItems[index],
-                  isSelected: isSelected == index,
-                ),
-              ),
+      children: [
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              onTap(0);
+            },
+            child: AllExpensesItem(
+              itemModel: _allExpensesItems[0],
+              isSelected: isSelected == 0,
             ),
-          );
-        },
-      ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              onTap(1);
+            },
+            child: AllExpensesItem(
+              itemModel: _allExpensesItems[1],
+              isSelected: isSelected == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 8,
+        ),
+        Expanded(
+          child: InkWell(
+            onTap: () {
+              onTap(2);
+            },
+            child: AllExpensesItem(
+              itemModel: _allExpensesItems[2],
+              isSelected: isSelected == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
