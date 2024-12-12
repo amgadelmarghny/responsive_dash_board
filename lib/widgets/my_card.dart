@@ -11,7 +11,7 @@ class MyCard extends StatelessWidget {
     return AspectRatio(
       aspectRatio: 420 / 215,
       child: Container(
-        padding: const EdgeInsets.only(bottom: 26, right: 24),
+        padding: const EdgeInsets.only(right: 24),
         decoration: BoxDecoration(
           image: const DecorationImage(
             image: AssetImage(Assets.imagesCardBackground),
@@ -47,6 +47,11 @@ class MyCard extends StatelessWidget {
               style: AppStyles.styleRegular16(context)
                   .copyWith(color: Colors.white),
             ),
+            const Flexible(
+              child: SizedBox(
+                height: 54 - 28,
+              ),
+            )
           ],
         ),
       ),
