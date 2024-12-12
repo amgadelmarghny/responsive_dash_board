@@ -13,7 +13,10 @@ class DashBoardView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: MediaQuery.sizeOf(context).width < SizeConfigs.tabletSizeWidth
-          ? AppBar()
+          ? AppBar(
+              elevation: 0,
+              backgroundColor: Colors.transparent,
+            )
           : null,
       drawer: MediaQuery.sizeOf(context).width < SizeConfigs.tabletSizeWidth
           ? const Padding(
